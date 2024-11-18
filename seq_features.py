@@ -1,3 +1,5 @@
+import bootcamp_utils
+
 def number_negatives(seq):
     """Number of negative residues a protein sequence"""
     # Convert sequence to upper case
