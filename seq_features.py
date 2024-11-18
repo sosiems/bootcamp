@@ -11,5 +11,12 @@ def number_negatives(seq):
 
 def number_positives(seq):
     """Number of positive residues a protein sequence"""
-    # Count R's, K's and H's, since these are the positive residues
+    # Convert sequence to upper case
+    seq = seq.upper()
+
+    # Check for a valid sequence
+    for aa in seq:
+        if aa not in bootcamp_utils.aa.keys():
+            raise RuntimeError(aa + ' is not a valid amino acid.')
+
     return seq.count('R') + seq.count('K') + seq.count('H')
